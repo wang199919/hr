@@ -1,7 +1,9 @@
 package roy.hr;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,6 +19,8 @@ import java.util.Objects;
  * @description:
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Hr  implements UserDetails {
     private Integer id;
 

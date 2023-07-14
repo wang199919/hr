@@ -11,5 +11,5 @@ import lombok.Data;
 public class Role {
     private  Integer id;
     private  String name;
-    private  String nameZh;
+    private  String namezh;
 }
