@@ -2,6 +2,8 @@ package roy.hr.mapper;
 
 import roy.hr.Role;
 
+import java.util.List;
+
 /**
  * @author: roy
  * @date: 2023/7/15 0:05
@@ -12,6 +14,7 @@ public interface RoleMapper {
 
     int insert(Role record);
 
+    List<Role> getAllRoles();
     int insertSelective(Role record);
 
     Role selectByPrimaryKey(Integer id);

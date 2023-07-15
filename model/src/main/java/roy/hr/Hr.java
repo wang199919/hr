@@ -1,6 +1,5 @@
 package roy.hr;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -56,7 +55,6 @@ public class Hr  implements UserDetails {
         return Objects.hash(username);
     }
     @Override
-    @JsonIgnore
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<SimpleGrantedAuthority> authorities =new ArrayList<>(roles.size());
         for(Role role:roles){

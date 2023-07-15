@@ -3,5 +3,6 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/mapper/src/main/resources/mapperxml/HrMapper.xml" dialect="Redshift" />
     <file url="file://$PROJECT_DIR$/mapper/src/main/resources/mapperxml/RoleMapper.xml" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/web/src/main/resources/db/migration/V1__vhr.sql" dialect="MySQL" />
   </component>
 </project>
