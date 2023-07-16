@@ -1,10 +1,13 @@
 package roy.hr;
 
+import lombok.Data;
+
 /**
  * @author: roy
  * @date: 2023/7/15 22:33
  * @description:
  */
+@Data
 public class RespBean {
     private  int status;
     private  String msg;

@@ -1,6 +1,5 @@
 package roy.hr.mapper;
 
-
 import org.apache.ibatis.annotations.Param;
 import roy.hr.Hr;
 import roy.hr.Role;
@@ -9,31 +8,32 @@ import java.util.List;
 
 /**
  * @author: roy
- * @date: 2023/7/15 0:05
+ * @date: 2023/7/16 11:34
  * @description:
  */
-    public interface HrMapper {
-        int deleteByPrimaryKey(Integer id);
+public interface HrMapper {
+    int deleteByPrimaryKey(Integer id);
 
-        int insert(Hr record);
+    int insert(Hr record);
 
-        int insertSelective(Hr record);
+    int insertSelective(Hr record);
 
-        Hr selectByPrimaryKey(Integer id);
+    Hr selectByPrimaryKey(Integer id);
 
-        int updateByPrimaryKeySelective(Hr record);
+    int updateByPrimaryKeySelective(Hr record);
 
-        int updateByPrimaryKey(Hr record);
+    int updateByPrimaryKey(Hr record);
 
-        Hr loadUserByUsername(String username);
+    Hr loadUserByUsername(String username);
 
-        List<Role> getHrRolesById(Integer id);
+    List<Role> getHrRoleById(Integer id);
 
-        List<Hr> getAllHrs(@Param("hrid") Integer hrid, @Param("keywords") String keywords);
+    List<Hr> getAllHrs(@Param("hrid") Integer hrid,@Param("keywords")String keyword);
 
-        List<Hr> getAllHrsExceptCurrentHr(Integer id);
+    List<Hr> getAllHrsExceptCurrentHr(Integer id);
 
-        Integer updatePasswd(@Param("hrid") Integer hrid, @Param("encodePass") String encodePass);
 
-        Integer updateUserface(@Param("url") String url, @Param("id") Integer id);
-    }
+    Integer updatePasswd(@Param("hrid") Integer hrid, @Param("encodePass") String encodePass);
+
+    Integer updateUserface(@Param("url") String url, @Param("id") Integer id);
+}
