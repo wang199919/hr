@@ -1,6 +1,7 @@
 package roy.hr.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import roy.hr.Role;
 import roy.hr.mapper.RoleMapper;
 import roy.hr.service.RoleService;
@@ -12,6 +13,7 @@ import java.util.List;
  * @date: 2023/7/15 22:23
  * @description:
  */
+@Service
 public class RoleServiceImpl implements RoleService {
 
     @Autowired

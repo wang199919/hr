@@ -28,9 +28,10 @@ public class Menu {
 
     private Boolean enabled;
 
-    private List<Menu> childen;
+    private List<Menu> children;
 
     private  List<Role> roles;
+
 
     public Integer getId() {
         return id;
@@ -91,12 +92,12 @@ public class Menu {
         this.enabled = enabled;
     }
 
-    public List<Menu> getChilden() {
-        return childen;
+    public List<Menu> getChildren() {
+        return children;
     }
 
-    public void setChilden(List<Menu> childen) {
-        this.childen = childen;
+    public void setChildren(List<Menu> children) {
+        this.children = children;
     }
 
     public List<Role> getRoles() {

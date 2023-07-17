@@ -16,7 +16,7 @@
     </association>
   </resultMap>
   <resultMap id="Menus2" type="roy.hr.Menu" extends="BaseResultMap">
-    <collection property="childen" ofType="roy.hr.Menu">
+    <collection property="children" ofType="roy.hr.Menu">
       <id column="id2" property="id" jdbcType="INTEGER" />
       <result column="url2" property="url" jdbcType="VARCHAR" />
       <result column="path2" property="path" jdbcType="VARCHAR" />

@@ -3,6 +3,7 @@ package roy.hr.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.jaas.SecurityContextLoginModule;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Service;
 import roy.hr.Hr;
 import roy.hr.Menu;
 import roy.hr.mapper.MenuMapper;
@@ -18,7 +19,7 @@ import java.util.List;
  * @description:
  */
 
-
+@Service
 public class MenuServiceImpl  implements MenuService {
     @Autowired
     MenuMapper menuMapper;
