@@ -5,8 +5,8 @@
       <ProjectProfile>
         <option name="javaMapperPackage" value="roy.hr.mapper" />
         <option name="javaMapperPath" value="E:\java\hr\mapper\src\main\java" />
-        <option name="javaModelPackage" value="com.domain" />
-        <option name="javaModelPath" value="$PROJECT_DIR$/service/src/main/java" />
+        <option name="javaModelPackage" value="roy.hr" />
+        <option name="javaModelPath" value="E:\java\hr\model\src\main\java" />
         <option name="lastDatabaseCrudChooseModuleName" value="service" />
         <option name="moduleNameToPackageAndPathMap">
           <map>
@@ -15,10 +15,10 @@
                 <UserPackageAndPathInfoByModule>
                   <option name="javaMapperPackage" value="roy.hr.mapper" />
                   <option name="javaMapperPath" value="E:\java\hr\mapper\src\main\java" />
-                  <option name="javaModelPacakge" value="com.domain" />
-                  <option name="javaModelPath" value="$PROJECT_DIR$/service/src/main/java" />
-                  <option name="xmlPackage" value="mapperxml" />
-                  <option name="xmlPath" value="E:\java\hr\mapper\src\main\resources" />
+                  <option name="javaModelPacakge" value="roy.hr" />
+                  <option name="javaModelPath" value="E:\java\hr\model\src\main\java" />
+                  <option name="xmlPackage" value="roy.hr.mapper" />
+                  <option name="xmlPath" value="E:\java\hr\mapper\src\main\java" />
                 </UserPackageAndPathInfoByModule>
               </value>
             </entry>
@@ -46,6 +46,26 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="hr:menu">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Menu" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:menu_role">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="MenuRole" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="hr:role">
               <value>
                 <TableGenerateConfig>
@@ -58,8 +78,8 @@
             </entry>
           </map>
         </option>
-        <option name="xmlMapperPackage" value="mapperxml" />
-        <option name="xmlMapperPath" value="E:\java\hr\mapper\src\main\resources" />
+        <option name="xmlMapperPackage" value="roy.hr.mapper" />
+        <option name="xmlMapperPath" value="E:\java\hr\mapper\src\main\java" />
       </ProjectProfile>
     </option>
   </component>
