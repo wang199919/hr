@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date: 2023/7/15 21:44
  * @description:
  */
-@MapperScan(basePackages = "roy.hr.mapper")
+@MapperScan({ "roy.hr.mapper"})
 @SpringBootApplication
 public class VhrApplication {
     public static void main(String[] args) {

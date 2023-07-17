@@ -26,6 +26,16 @@
         </option>
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="hr:employee">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Employee" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="hr:hr">
               <value>
                 <TableGenerateConfig>
@@ -71,6 +81,16 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="id" />
                   <option name="javaModelName" value="Role" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:salary">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Salary" />
                   <option name="moduleName" value="service" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>
