@@ -56,6 +56,16 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="hr:joblevel">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Joblevel" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="hr:menu">
               <value>
                 <TableGenerateConfig>
@@ -71,6 +81,16 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="id" />
                   <option name="javaModelName" value="MenuRole" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:nation">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Nation" />
                   <option name="moduleName" value="service" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>
