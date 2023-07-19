@@ -29,18 +29,18 @@ public class HrController {
         return  hrService.getAllHrs(keywords);
     }
 
-    @PutMapping("/")
+    @PutMapping("/update")
     public RespBean updateHr(@RequestBody Hr hr){
         if(hrService.updateHr(hr)==1)return  RespBean.success(200,"更新成功");
         return  RespBean.failure (400,"更新失败");
     }
 
-    @GetMapping("/roles")
+    @GetMapping("/getRoles")
     public List<Role> getAllRoleByHr(){
         return  roleService.getAllRoles();
     }
 
-    @PutMapping("/role")
+    @PutMapping("/updateRoleWithHrId")
     public RespBean updateHrRole(Integer hrid,Integer [] rids){
         if(hrService.updateHrRole(hrid,rids)){
             return RespBean.success(200,"更新成功");
@@ -48,7 +48,7 @@ public class HrController {
         return  RespBean.failure(400,"更新失败");
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public  RespBean deleteHrById(@PathVariable Integer id){
         if(hrService.deleteById(id)==1)return RespBean.success(200,"删除成功");
         return  RespBean.failure(400,"删除失败");

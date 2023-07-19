@@ -14,7 +14,7 @@ import java.util.List;
  * @description:
  */
 @RestController
-@RequestMapping("salary")
+@RequestMapping("/salary")
 public class SalaryController {
     @Autowired
     SalaryService salaryService;
@@ -24,19 +24,19 @@ public class SalaryController {
         return  salaryService.getAllSalaries();
     }
 
-    @PostMapping("/")
+    @PostMapping("/add")
     public RespBean addSalary(@RequestBody Salary salary){
         if(salaryService.addSalary(salary)==1)return RespBean.success(200,"添加成功");
         return RespBean.failure(400,"添加失败");
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public  RespBean deleteSalary(@PathVariable  Integer id){
         if(salaryService.deleteSalaryByID(id)==1)return  RespBean.success(200,"删除成功");
         return RespBean.failure(400,"删除失败");
     }
 
-    @PutMapping
+    @PutMapping("/update")
     public  RespBean updateSalary(@RequestBody Salary salary){
         if(salaryService.updateSalary(salary)==1)return  RespBean.success(200,"修改成功");
         return RespBean.failure(400,"修改失败");

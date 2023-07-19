@@ -17,6 +17,8 @@
                   <option name="javaMapperPath" value="E:\java\hr\mapper\src\main\java" />
                   <option name="javaModelPacakge" value="roy.hr" />
                   <option name="javaModelPath" value="E:\java\hr\model\src\main\java" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/service/src/main/java" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/service/src/main/java" />
                   <option name="xmlPackage" value="roy.hr.mapper" />
                   <option name="xmlPath" value="E:\java\hr\mapper\src\main\java" />
                 </UserPackageAndPathInfoByModule>
@@ -26,6 +28,16 @@
         </option>
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="hr:department">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Department" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="hr:employee">
               <value>
                 <TableGenerateConfig>
@@ -91,6 +103,16 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="id" />
                   <option name="javaModelName" value="Nation" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:position">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Position" />
                   <option name="moduleName" value="service" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>
