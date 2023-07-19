@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="roy.hr.mapper.MailSendLogMapper">
+  <resultMap id="BaseResultMap" type="roy.hr.MailSendLog">
+    <!--@mbg.generated-->
+    <!--@Table mail_send_log-->
+    <result column="msgId" jdbcType="VARCHAR" property="msgid" />
+    <result column="empId" jdbcType="INTEGER" property="empid" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="routeKey" jdbcType="VARCHAR" property="routekey" />
+    <result column="exchange" jdbcType="VARCHAR" property="exchange" />
+    <result column="count" jdbcType="INTEGER" property="count" />
+    <result column="tryTime" jdbcType="DATE" property="trytime" />
+    <result column="createTime" jdbcType="DATE" property="createtime" />
+    <result column="updateTime" jdbcType="DATE" property="updatetime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    msgId, empId, `status`, routeKey, exchange, `count`, tryTime, createTime, updateTime
+  </sql>
+  <insert id="insert" parameterType="roy.hr.MailSendLog">
+    <!--@mbg.generated-->
+    insert into mail_send_log (msgId, empId, `status`, 
+      routeKey, exchange, `count`, 
+      tryTime, createTime, updateTime
+      )
+    values (#{msgid,jdbcType=VARCHAR}, #{empid,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, 
+      #{routekey,jdbcType=VARCHAR}, #{exchange,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, 
+      #{trytime,jdbcType=DATE}, #{createtime,jdbcType=DATE}, #{updatetime,jdbcType=DATE}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="roy.hr.MailSendLog">
+    <!--@mbg.generated-->
+    insert into mail_send_log
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="msgid != null">
+        msgId,
+      </if>
+      <if test="empid != null">
+        empId,
+      </if>
+      <if test="status != null">
+        `status`,
+      </if>
+      <if test="routekey != null">
+        routeKey,
+      </if>
+      <if test="exchange != null">
+        exchange,
+      </if>
+      <if test="count != null">
+        `count`,
+      </if>
+      <if test="trytime != null">
+        tryTime,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="msgid != null">
+        #{msgid,jdbcType=VARCHAR},
+      </if>
+      <if test="empid != null">
+        #{empid,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="routekey != null">
+        #{routekey,jdbcType=VARCHAR},
+      </if>
+      <if test="exchange != null">
+        #{exchange,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null">
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="trytime != null">
+        #{trytime,jdbcType=DATE},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=DATE},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert><delete id="updateCount">
+   update mail_send_log set count=count+1,updateTime=#{date} where msgId=#{id};
+</delete>
+<update id="updateMailSendLogStatus">
+ update mail_send_log set status = #{status} where msgId=#{msgId};
+</update><select id="getMailSendLogsByStatus" resultMap="BaseResultMap">
+   select * from mail_send_log where status=0 and tryTime &lt; sysdate()
+</select>
+</mapper>

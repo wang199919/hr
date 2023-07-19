@@ -1,14 +1,10 @@
 package roy.hr.mapper;
 
-import org.apache.ibatis.annotations.Param;
-import roy.hr.Employee;
-
-import java.util.Date;
-import java.util.List;
+import org.apache.ibatis.annotations.Param;import roy.hr.Employee;import java.util.Date;import java.util.List;
 
 /**
  * @author: roy
- * @date: 2023/7/17 22:22
+ * @date: 2023/7/19 23:00
  * @description:
  */
 public interface EmployeeMapper {
@@ -24,16 +20,20 @@ public interface EmployeeMapper {
 
     int updateByPrimaryKey(Employee record);
 
-    List<Employee> getEmployeeByPage(@Param("page") Integer page,@Param("size") Integer size,@Param("emp") Employee employee,@Param("beginDateScope") Date[] dates);
+    List<Employee> getEmployeeByPage(@Param("page") Integer page, @Param("size") Integer size, @Param("emp") Employee employee, @Param("beginDateScope") Date[] dates);
 
-    Long getTotal(@Param("emp") Employee employee,@Param("beginDataScope")Date[] beginDateScope);
+    Long getTotal(@Param("emp") Employee employee, @Param("beginDataScope") Date[] beginDateScope);
 
     Integer maxWorkID();
 
-    Integer addEmps(@Param("emps")List<Employee > list);
+    Integer addEmps(@Param("emps") List<Employee> list);
 
     List<Employee> getEmployeeByPageWithSalary(@Param("page") Integer page, @Param("size") Integer size);
 
     Integer updateEmployeeSalaryById(@Param("eid") Integer eid, @Param("sid") Integer sid);
+
+    Employee getEmployeeById(Integer id);
+
+
 
 }

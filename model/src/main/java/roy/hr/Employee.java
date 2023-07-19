@@ -4,149 +4,198 @@ import java.util.Date;
 
 /**
  * @author: roy
- * @date: 2023/7/17 22:22
+ * @date: 2023/7/19 23:00
  * @description:
  */
 public class Employee {
     /**
-    * 员工编号
-    */
+     * 员工编号
+     */
     private Integer id;
 
     /**
-    * 员工姓名
-    */
+     * 员工姓名
+     */
     private String name;
 
     /**
-    * 性别
-    */
+     * 性别
+     */
     private String gender;
 
     /**
-    * 出生日期
-    */
+     * 出生日期
+     */
     private Date birthday;
 
     /**
-    * 身份证号
-    */
+     * 身份证号
+     */
     private String idcard;
 
     /**
-    * 婚姻状况
-    */
+     * 婚姻状况
+     */
     private Object wedlock;
 
     /**
-    * 民族
-    */
+     * 民族
+     */
     private Integer nationid;
 
     /**
-    * 籍贯
-    */
+     * 籍贯
+     */
     private String nativeplace;
 
     /**
-    * 政治面貌
-    */
+     * 政治面貌
+     */
     private Integer politicid;
 
     /**
-    * 邮箱
-    */
+     * 邮箱
+     */
     private String email;
 
     /**
-    * 电话号码
-    */
+     * 电话号码
+     */
     private String phone;
 
     /**
-    * 联系地址
-    */
+     * 联系地址
+     */
     private String address;
 
     /**
-    * 所属部门
-    */
+     * 所属部门
+     */
     private Integer departmentid;
 
     /**
-    * 职称ID
-    */
+     * 职称ID
+     */
     private Integer joblevelid;
 
     /**
-    * 职位ID
-    */
+     * 职位ID
+     */
     private Integer posid;
 
     /**
-    * 聘用形式
-    */
+     * 聘用形式
+     */
     private String engageform;
 
     /**
-    * 最高学历
-    */
+     * 最高学历
+     */
     private Object tiptopdegree;
 
     /**
-    * 所属专业
-    */
+     * 所属专业
+     */
     private String specialty;
 
     /**
-    * 毕业院校
-    */
+     * 毕业院校
+     */
     private String school;
 
     /**
-    * 入职日期
-    */
+     * 入职日期
+     */
     private Date begindate;
 
     /**
-    * 在职状态
-    */
+     * 在职状态
+     */
     private Object workstate;
 
     /**
-    * 工号
-    */
+     * 工号
+     */
     private String workid;
 
     /**
-    * 合同期限
-    */
+     * 合同期限
+     */
     private Double contractterm;
 
     /**
-    * 转正日期
-    */
+     * 转正日期
+     */
     private Date conversiontime;
 
     /**
-    * 离职日期
-    */
+     * 离职日期
+     */
     private Date notworkdate;
 
     /**
-    * 合同起始日期
-    */
+     * 合同起始日期
+     */
     private Date begincontract;
 
     /**
-    * 合同终止日期
-    */
+     * 合同终止日期
+     */
     private Date endcontract;
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", gender='" + gender + '\'' +
+                ", birthday=" + birthday +
+                ", idcard='" + idcard + '\'' +
+                ", wedlock=" + wedlock +
+                ", nationid=" + nationid +
+                ", nativeplace='" + nativeplace + '\'' +
+                ", politicid=" + politicid +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", departmentid=" + departmentid +
+                ", joblevelid=" + joblevelid +
+                ", posid=" + posid +
+                ", engageform='" + engageform + '\'' +
+                ", tiptopdegree=" + tiptopdegree +
+                ", specialty='" + specialty + '\'' +
+                ", school='" + school + '\'' +
+                ", begindate=" + begindate +
+                ", workstate=" + workstate +
+                ", workid='" + workid + '\'' +
+                ", contractterm=" + contractterm +
+                ", conversiontime=" + conversiontime +
+                ", notworkdate=" + notworkdate +
+                ", begincontract=" + begincontract +
+                ", endcontract=" + endcontract +
+                ", workage=" + workage +
+                ", workAge=" + workAge +
+                ", nation=" + nation +
+                ", politicsstatus=" + politicsstatus +
+                ", department=" + department +
+                ", jobLevel=" + jobLevel +
+                ", position=" + position +
+                '}';
+    }
+
     /**
-    * 工龄
-    */
+     * 工龄
+     */
     private Integer workage;
+
+    private Integer workAge;
+    private Nation nation;
+    private Politicsstatus politicsstatus;
+    private Department department;
+    private Joblevel jobLevel;
+    private Position position;
+    private Salary salary;
+
 
     public Integer getId() {
         return id;
@@ -370,5 +419,61 @@ public class Employee {
 
     public void setWorkage(Integer workage) {
         this.workage = workage;
+    }
+
+    public Integer getWorkAge() {
+        return workAge;
+    }
+
+    public void setWorkAge(Integer workAge) {
+        this.workAge = workAge;
+    }
+
+    public Nation getNation() {
+        return nation;
+    }
+
+    public void setNation(Nation nation) {
+        this.nation = nation;
+    }
+
+    public Politicsstatus getPoliticsstatus() {
+        return politicsstatus;
+    }
+
+    public void setPoliticsstatus(Politicsstatus politicsstatus) {
+        this.politicsstatus = politicsstatus;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
+    public Joblevel getJobLevel() {
+        return jobLevel;
+    }
+
+    public void setJobLevel(Joblevel jobLevel) {
+        this.jobLevel = jobLevel;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
+    }
+
+    public Salary getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Salary salary) {
+        this.salary = salary;
     }
 }

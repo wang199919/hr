@@ -17,8 +17,6 @@
                   <option name="javaMapperPath" value="E:\java\hr\mapper\src\main\java" />
                   <option name="javaModelPacakge" value="roy.hr" />
                   <option name="javaModelPath" value="E:\java\hr\model\src\main\java" />
-                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/service/src/main/java" />
-                  <option name="javaServicePath" value="$PROJECT_DIR$/service/src/main/java" />
                   <option name="xmlPackage" value="roy.hr.mapper" />
                   <option name="xmlPath" value="E:\java\hr\mapper\src\main\java" />
                 </UserPackageAndPathInfoByModule>
@@ -28,6 +26,26 @@
         </option>
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="hr:adjustsalary">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Adjustsalary" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:appraise">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Appraise" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="hr:department">
               <value>
                 <TableGenerateConfig>
@@ -43,6 +61,46 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="id" />
                   <option name="javaModelName" value="Employee" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:employeeec">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Employeeec" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:employeeremove">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Employeeremove" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:employeetrain">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Employeetrain" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:empsalary">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Empsalary" />
                   <option name="moduleName" value="service" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>
@@ -78,6 +136,18 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="hr:mail_send_log">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="" />
+                  <option name="javaModelName" value="MailSendLog" />
+                  <option name="moduleName" value="service" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="hr:menu">
               <value>
                 <TableGenerateConfig>
@@ -98,11 +168,41 @@
                 </TableGenerateConfig>
               </value>
             </entry>
+            <entry key="hr:msgcontent">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Msgcontent" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="hr:nation">
               <value>
                 <TableGenerateConfig>
                   <option name="generatedKey" value="id" />
                   <option name="javaModelName" value="Nation" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:oplog">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Oplog" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:politicsstatus">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Politicsstatus" />
                   <option name="moduleName" value="service" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>
@@ -133,6 +233,16 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="id" />
                   <option name="javaModelName" value="Salary" />
+                  <option name="moduleName" value="service" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="hr:sysmsg">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Sysmsg" />
                   <option name="moduleName" value="service" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>
