@@ -2,6 +2,7 @@ package roy.hr.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -27,7 +28,7 @@ public class EmployeeService {
     @Autowired
     EmployeeMapper employeeMapper;
     @Autowired
-    MailSendLogMapper mailSendLogMapper;
+    MailSendLogService mailSendLogService;
     @Autowired
     RabbitTemplate rabbitTemplate;
     public final static Logger logger = LoggerFactory.getLogger(EmployeeService.class);
@@ -63,7 +64,7 @@ public class EmployeeService {
             mailSendLog.setRoutekey(MailConstants.MAIL_ROUTING_KEY_NAME);
             mailSendLog.setEmpid(emp.getId());
             mailSendLog.setTrytime(new Date(System.currentTimeMillis() + 1000 * 60 * MailConstants.MSG_TIMEOUT));
-            mailSendLogservice.insert(mailSendLog);
+            mailSendLogService.addMLS(mailSendLog);
             rabbitTemplate.convertAndSend(MailConstants.MAIL_EXCHANGE_NAME, MailConstants.MAIL_ROUTING_KEY_NAME, emp, new CorrelationData(msgId));
         }
         return result;
