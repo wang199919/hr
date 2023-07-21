@@ -6,6 +6,7 @@ import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Service;
 import roy.hr.Employee;
 import roy.hr.MailConstants;
 import roy.hr.MailSendLog;
@@ -24,6 +25,7 @@ import java.util.UUID;
  * @date: 2023/7/20 18:56
  * @description:
  */
+@Service
 public class EmployeeService {
     @Autowired
     EmployeeMapper employeeMapper;
