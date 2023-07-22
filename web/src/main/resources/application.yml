@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mysql://124.222.48.211:3306/hr
+    url: jdbc:mysql://
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: m5zTZNxExhFM8s7Y
+    password: root
 
   flyway:
     enabled: false
