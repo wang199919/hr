@@ -28,6 +28,7 @@ public class HrServiceImpl implements UserDetailsService {
 
 
     public List<Hr> getAllHrs(String key) {
+        System.out.println(key);
         return hrMapper.getAllHrs(HrUtils.getCurrentHr().getId(),key);
     }
 

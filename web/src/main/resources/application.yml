@@ -1,9 +1,14 @@
 spring:
   datasource:
-    url: jdbc:mysql://
+    url: jdbc:mysql://124.222.48.211:3306/hr
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: root
+    password: m5zTZNxExhFM8s7Y
 
   flyway:
     enabled: false
+jwt:
+  tokenHeader: Authorization #JWT存储的请求头
+  secret: 1212121hsodhsdhasdhsaldhsalhdlsahdlsadsdasdasdasdasdsdas
+  expiration: 604800 #JWT的超期限时间(60*60*24)
+  tokenHead: Bearer  #JWT负载中拿到开头
